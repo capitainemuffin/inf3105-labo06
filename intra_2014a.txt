@@ -1,0 +1,57 @@
+1) 
+
+	a) initialise une variable de type pointeur de int qui pointe à la première case d'un tableau pouvant contenir 8 int (les 32 octets sont réservés) sur le heap.
+	le pointeur est sur le stack, le tableau est sur le heap.
+
+	opérateurs appelés : new, = 
+
+	b) 
+
+		état de la mémoire :
+
+			créer tous les emplacements mémoire avant même d'arriver à la ligne
+
+			dans le main, sur le stack : 
+
+				- pointeur de int t
+				- int x -> 0
+				- int i -> 0
+
+			******** libéré *********
+			dans f1, sur le stack :
+
+				- pointeur de int tab -> t du main 
+				- int n -> 4
+				- pointeur de int t -> tab
+				- pointeur de int f -> tab + 4 -> tab[4]
+			******** libéré *********
+
+			dans f2, sur le stack :
+
+				- int a -> x du main
+				- int b -> i du main
+
+			sur la pile : 
+
+				- 8 cases de int (32 octets) -> 1, 3, 5, 7, 5, ?, ?, ?
+
+
+		pile : 32 octets reservés (tableau de 8 int)
+		f1(t, 4) -> 
+
+
+	c) 1 3 5 7 5 ? ? ? 16
+	d) non, pas de delete sur le pointeur de int t -> delete t[]
+	e) affiche la même chose mais l'un est fait avec le heap et l'autre avec le stack
+	f) bob mieux : plus lisible, moins de gestion, etc
+
+2)
+
+	a) O(1), O(n²), O(2^n), O(n³), O(m+nlogn), O(n²), O(nlogn), O(n!)
+	b) le nombre de triangles équilatéraux 
+	c) O(n³)
+	d) n²logn
+
+3)
+
+	b) 
